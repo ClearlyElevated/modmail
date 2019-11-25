@@ -286,7 +286,7 @@ class Utility(commands.Cog):
         embed.set_author(
             name="Modmail - About",
             icon_url=self.bot.user.avatar_url,
-            url="https://discord.gg/F34cRU8",
+            url="https://discord.gg/XWzVYWj",
         )
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 
@@ -298,7 +298,7 @@ class Utility(commands.Cog):
         embed.add_field(name="Uptime", value=self.bot.uptime)
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
-        embed.add_field(name="Authors", value="`kyb3r`, `Taki`, `fourjr`")
+        embed.add_field(name="Bot Owner", value="`ClearlyElevated`")
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -318,17 +318,14 @@ class Utility(commands.Cog):
 
         embed.add_field(
             name="Want Modmail in Your Server?",
-            value="Follow the installation guide on [GitHub](https://github.com/kyb3r/modmail/) "
-            "and join our [Discord server](https://discord.gg/F34cRU8/)!",
+            value="Join ClearlyElevated's [Server](https://discord.io/underground_server/) For Info"
+            "and join our [Status Monitor](https://ClearlyElevated.github.io/)!",
             inline=False,
         )
 
         embed.add_field(
             name="Support the Developers",
-            value="This bot is completely free for everyone. We rely on kind individuals "
-            "like you to support us on [`Patreon`](https://patreon.com/kyber) (perks included) "
-            "to keep this bot free forever!",
-            inline=False,
+            value="Support us on [`Patreon`](https://patreon.com/ClearlyElevated)",
         )
 
         embed.set_footer(text=footer)
@@ -340,7 +337,7 @@ class Utility(commands.Cog):
     async def sponsors(self, ctx):
         """Shows a list of sponsors."""
         resp = await self.bot.session.get(
-            "https://raw.githubusercontent.com/kyb3r/modmail/master/SPONSORS.json"
+            "https://raw.githubusercontent.com/clearlyelevated/modmail/master/SPONSORS.json"
         )
         data = loads(await resp.text())
 
