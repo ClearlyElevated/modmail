@@ -319,7 +319,6 @@ class Utility(commands.Cog):
         embed.add_field(
             name="Want Modmail in Your Server?",
             value="Join ClearlyElevated's [Server](https://discord.io/underground_server/) For Info"
-            value="Visit our [Status Monitor](https://ClearlyElevated.github.io/)"
             inline=False,
         )
 
